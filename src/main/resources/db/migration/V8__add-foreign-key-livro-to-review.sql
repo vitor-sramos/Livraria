@@ -1,0 +1,4 @@
+ALTER TABLE tb_review
+ADD COLUMN id_livro UUID NOT NULL UNIQUE,
+ADD CONSTRAINT fk_id_livro
+FOREIGN KEY(id_livro) REFERENCES tb_livro(id)
