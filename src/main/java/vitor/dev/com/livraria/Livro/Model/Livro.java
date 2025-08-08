@@ -28,13 +28,13 @@ public class Livro {
 
     private String titulo;
 
-    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToOne//(fetch = FetchType.LAZY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_editora")
     private Editora editora;
 
-    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToMany//(fetch = FetchType.LAZY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "tb_livro_autor",
             joinColumns = @JoinColumn(name = "id_livro"),

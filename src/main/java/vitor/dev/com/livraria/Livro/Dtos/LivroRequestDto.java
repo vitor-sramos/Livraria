@@ -5,10 +5,10 @@ import vitor.dev.com.livraria.Autor.Model.Autor;
 import java.util.Set;
 import java.util.UUID;
 
-public record LivroResponseDto(
+public record LivroRequestDto(
 
         String titulo,
         UUID id_editora,
-        Set<Autor> id_autor,
+        Set<UUID> id_autores,
         String review
 ) {}
